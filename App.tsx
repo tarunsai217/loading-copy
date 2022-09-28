@@ -4,10 +4,11 @@ import LoadingWrapper from './LoadingWrapper';
 
 export default function App() {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-      <LoadingWrapper />
-    </div>
+    <LoadingWrapper loading={false}>
+      <div>
+        <h1>Hello StackBlitz!</h1>
+        <p>Start editing to see some magic happen :)</p>
+      </div>
+    </LoadingWrapper>
   );
 }
