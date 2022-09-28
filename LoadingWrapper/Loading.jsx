@@ -3,5 +3,11 @@ import './Loading.scss';
 import Circle from './Loaders/Circle';
 
 export default function Loading({ loading, ...props }) {
-  return loading ? <p>Loading...</p> : <>{props.children}</>;
+  return loading ? (
+    <div className="loading-overlay">
+      <Circle />
+    </div>
+  ) : (
+    <>{props.children}</>
+  );
 }
